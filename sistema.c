@@ -121,5 +121,51 @@ main()
 	{
 	}
 	imprime(l1,l2,l3,l4);
+
+
+//------------- ZERANDO A SEGUNDA COLUNA
+
+	printf("Zerando a coluna 2...\n\n");
+	if(l2[1]!=0)
+	{
+		pivo = l3[1]/l2[1];
+
+		for(i=0;i<5;i++)
+		{
+			l3[i] = l3[i] - pivo*l2[i];
+		}
+	}
+	else
+	{
+		for(i=0;i<5;i++)
+		{
+			lk[i] = l2[i];
+
+		}
+		for(i=0;i<5;i++)
+		{
+			l2[i] = l3[i];
+			l3[i] = lk[i];
+		}
+
+	}
+	imprime(l1,l2,l3,l4);
+	printf("\n");
+
+
+	if(l4[1]!=0)
+	{
+		pivo = l4[1]/l2[1];
+
+		for(i=0;i<5;i++)
+		{
+			l4[i] = l4[i] - pivo*l2[i];
+		}
+	}
+	else
+	{
+        }
+	imprime(l1,l2,l3,l4);
+
 	
 }	
