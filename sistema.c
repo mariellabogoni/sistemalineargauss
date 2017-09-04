@@ -61,4 +61,34 @@ main()
 	printf("\nMatriz do sistema: \n");
 	imprime(l1,l2,l3,l4);
 	
+
+//--------------------ZERANDO O PRIMEIRO ELEMENTO DA SEGUNDA LINHA
+
+	printf("Zerando primeiro elemento...\n\n");
+
+	if(l1[0]!=0)
+	{
+		pivo = l2[0]/l1[0];
+
+		for(i=0;i<5; i++)
+		{
+			l2[i] = l2[i] - pivo*l1[i];
+		}
+	}
+		
+	else
+	{
+		for(i=0;i<5;i++)
+                {
+			lk[i] = l1[i];
+		}
+		for(i=0;i<5;i++)
+		{
+			l1[i] = l2[i];
+			l2[i] = lk[i];
+		}
+
+	}
+	imprime(l1,l2,l3,l4);	
+	
 }	
