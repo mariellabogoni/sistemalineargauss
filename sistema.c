@@ -167,5 +167,33 @@ main()
         }
 	imprime(l1,l2,l3,l4);
 
+//------------------- ULTIMA COLUNA
+
+	printf("Finalizando o escalonamento...\n\n");
+
+	if(l3[2]!=0)
+	{
+		pivo = l4[2]/l3[2];
+
+		for(i=0;i<5;i++)
+		{
+			l4[i] = l4[i] - pivo*l3[i];
+		}
+	}
+	else
+	{
+		for(i=0;i<5; i++)
+		{
+			lk[i] = l3[i];
+		}
+		for(i=0;i<5;i++)
+		{
+			l3[i] = l4[i];
+			l4[i] = lk[i];
+		}
+	}
+	imprime(l1,l2,l3,l4);
+	
+
 	
 }	
