@@ -91,4 +91,35 @@ main()
 	}
 	imprime(l1,l2,l3,l4);	
 	
+	
+//-------------------------- ZERANDO O RESTANTE DA COLUNA 
+
+	printf("\nZerando o restante da coluna...\n\n");
+
+        if(l3[0]!=0)
+	{
+		pivo = l3[0]/l1[0];
+
+		for(i=0;i<5;i++)
+                { 
+			l3[i] = l3[i] - pivo*l1[i];
+		}
+	}
+	else
+	{
+	}
+	if(l4[0]!=0)
+	{
+		pivo = l4[0]/l1[0];
+
+		for(i=0;i<5;i++)
+		{
+			l4[i] = l4[i] - pivo*l1[i];
+		}
+	}
+	else
+	{
+	}
+	imprime(l1,l2,l3,l4);
+	
 }	
