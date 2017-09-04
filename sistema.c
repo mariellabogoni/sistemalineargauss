@@ -1,4 +1,32 @@
 #include <stdio.h>
+void imprime(float m1[5], float m2[5], float m3[5], float m4[5])
+{
+	int i;
+
+	for(i=0;i<5;i++)
+	{
+		printf("%.1f \t", m1[i]);
+	}
+	printf("\n");
+
+	for(i=0;i<5;i++)
+	{
+		printf("%.1f \t", m2[i]);
+	}
+	printf("\n");
+
+	for(i=0;i<5;i++)
+	{ 
+		printf("%.1f \t", m3[i]);
+	}
+	printf("\n");
+
+	for(i=0;i<5;i++)
+	{
+		printf("%.1f \t", m4[i]);
+	}
+	printf("\n");
+}
 main()
 {     
 	float l1[5], l2[5], l3[5], l4[5], lk[5];
@@ -30,4 +58,7 @@ main()
 		printf("Elemento [3][%d]: ", i);
 		scanf("%f", &l4[i]);
 	}
+	printf("\nMatriz do sistema: \n");
+	imprime(l1,l2,l3,l4);
+	
 }	
